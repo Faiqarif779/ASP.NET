@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="StudentManagementSystem_Semester_Project.Site" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>NSU Student Management System</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        /* Top Navigation Bar */
+        .navbar {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        /* Brand Group (Logo + Title Text) */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        /* Logo Styling */
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+            margin-right: 12px;
+            display: block;
+        }
+        /* Navigation Links List */
+        #Menu {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #Menu li {
+            margin-left: 20px;
+        }
+        #Menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        #Menu li a:hover {
+            text-decoration: underline;
+        }
+        /* Content Wrapper */
+        .container {
+            padding: 20px;
+            margin-bottom: 60px; /* Leaves space so text doesn't hide behind fixed footer */
+        }
+        /* Fixed Bottom Footer */
+        footer {
+            background-color: #343a40;
+            color: #ccc;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <nav class="navbar" id="mainNav">
+        <div class="navbar-brand">
+            <img src="nsu_logo.png" alt="NSU Logo">
+            <span>NSU Student Management System</span>
+        </div>
+        <ul id="Menu">
+            <li><a href="Dashboard.aspx">Dashboard</a></li>
+            <li><a href="Add.aspx">Add Student</a></li>
+            <li><a href="Update.aspx">Update/Delete</a></li>
+            <li><a href="About.aspx">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <footer>
+        <small id="footerText">Student Management System &copy; 2025</small>
+    </footer>
+    </form>
+</body>
+</html>
