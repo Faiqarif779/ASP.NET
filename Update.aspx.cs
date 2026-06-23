@@ -37,7 +37,7 @@ namespace StudentManagementSystem_Semester_Project
             {
                 txtID.Text = txtUpdateName.Text = txtUpdateEmail.Text = txtUpdatePhone.Text = txtUpdateCGPA.Text = "";
                 ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), Guid.NewGuid().ToString(),
-            "alert('Student Updated Successfully!\nCheck Dashboard.');", true);
+                "alert('Student Updated Successfully!\nCheck Dashboard.');", true);
                 txtID.Text = "";
                 txtUpdateName.Text = "";
                 txtUpdateEmail.Text = "";
@@ -46,8 +46,7 @@ namespace StudentManagementSystem_Semester_Project
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), Guid.NewGuid().ToString(),
-            "alert('Error!\nPlease enter correct Student ID.');", true);
+                Response.Write("<script>alert('Error in Updating Record!\nPlease enter correct Student ID.');</script>");
 
             }
             myDBCon.Close();
@@ -70,8 +69,7 @@ namespace StudentManagementSystem_Semester_Project
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), Guid.NewGuid().ToString(),
-             "alert('Error in deleting Record!\nPlease Enter Correct Name and ID.');", true);
+                Response.Write("<script>alert('Error in Deleting Record!\nPlease enter correct Student ID and Name.');</script>");
             }
             myDBCon.Close();
         }

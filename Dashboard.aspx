@@ -37,6 +37,7 @@
                 background-color: #ffffcc;
                 border-style: none;
             }
+
     </style>
     <h2>Dashboard</h2>
     <p>&nbsp;Welcome to NSU Student Management System</p>

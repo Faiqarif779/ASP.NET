@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="Add Student" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="StudentManagementSystem_Semester_Project.Add" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <style>
+
+    </style>
     <h2 style="text-align: center">Add Student</h2>
     <table style="width: 100%">
         <tr>

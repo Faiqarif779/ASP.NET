@@ -10,6 +10,34 @@
           .auto-style2 {
               height: 44px;
           }
+          #navBar {
+              background-color: #343a40;
+              padding: 10px;
+              margin-bottom: 20px;
+          }
+          #navBar ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+          }
+          #navBar ul li {
+              margin-right: 20px;
+          }
+          #navBar ul li a, #navBar ul li .aspNetDisabled {
+              color: white;
+              text-decoration: none;
+              font-weight: bold;
+              padding: 8px 16px;
+              border-radius: 4px;
+              transition: background-color 0.3s ease;
+          }
+
+          #navBar ul li a:hover, #navBar ul li .aspNetDisabled:hover {
+              background-color: #495057;
+          }
+
+
       </style>
 </head>
     <menu id="navBar">
@@ -63,7 +91,7 @@
             <tr>
                 <td style="height: 45px">&nbsp;</td>
                 <td style="height: 45px">
-                    <asp:Button ID="btn_Update" runat="server" Text="Update" Width="78px" OnClick="btn_Update_Click" ValidationGroup="UpdateGroup" />
+                    <asp:Button ID="btn_Update" runat="server" Text="Update" Width="78px" OnClick="btn_Update_Click" OnClientClick="return confirm('Are you sure you want to update this record?');" ValidationGroup="UpdateGroup" />
                 </td>
             </tr>
             <tr>
@@ -93,7 +121,7 @@
             </tr>
             <tr>
                 <td style="height: 45px">&nbsp;</td>
-                <td style="height: 45px"><asp:Button ID="btn_Delete" runat="server" Text="Delete" Width="78px" OnClick="btn_Delete_Click" ValidationGroup="DeleteGroup" /></td>
+                <td style="height: 45px"><asp:Button ID="btn_Delete" runat="server" Text="Delete" Width="78px" OnClick="btn_Delete_Click" OnClientClick="return confirm('Are you sure you want to delete this record?');" ValidationGroup="DeleteGroup" /></td>
             </tr>
             <tr>
                 <td class="auto-style2"></td>
